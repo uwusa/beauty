@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Montserrat';
+}
+
+.block {
+    width: 50px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.custom-btn {
+    background-color: rgb(122, 165, 182);
+    color: white;
+    font-size: large;
+}
+
+.container {
+
+    padding-top: 30px;
+
+}
+
+input {
+    height: 60px;
+}
+
+button {
+    height: 60px;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 800px) {
+    section {
+        height: auto;
+        width: auto;
+        margin: 0;
+    }
+
+    table {
+        width: 100%;
+        /* Устанавливаем ширину таблицы на 100% */
+        font-size: 15px;
+        /* Уменьшаем размер шрифта */
+        margin: 0;
+        padding: 0;
+    }
+
+    thead {
+        display: none;
+        /* Скрываем thead на мобильных устройствах */
+    }
+
+    th,
+    td {
+        padding: 10px;
+        /* Уменьшаем отступы в ячейках */
+    }
+
+    th {
+        font-size: 14px;
+        /* Уменьшаем размер шрифта заголовков */
+    }
+
+    /* Преобразование таблицы в карточки */
+    tr {
+        display: block;
+        /* Делаем строки блочными */
+        margin-bottom: 15px;
+        /* Добавляем отступ между карточками */
+        border: 1px solid #eee;
+        /* Добавляем границу */
+        border-radius: 5px;
+        /* Закругляем углы */
+        padding: 10px;
+        /* Добавляем внутренние отступы */
+    }
+
+    td {
+        display: flex;
+        /* Делаем ячейки блочными */
+        justify-content: space-between;
+        /* Выравниваем содержимое */
+        border: none;
+        /* Убираем границы ячеек */
+        padding: 5px 0;
+        /* Уменьшаем отступы */
+    }
+
+    td::before {
+        content: attr(data-label);
+        /* Используем атрибут data-label для заголовка */
+        font-weight: bold;
+        /* Делаем текст жирным */
+        margin-right: 10px;
+        /* Добавляем отступ */
+    }
+}
